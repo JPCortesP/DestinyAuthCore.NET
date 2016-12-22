@@ -1,10 +1,11 @@
 # DestinyAuthCore.NET
 Example of a .NET Core implementation of the new Bungie Auth
 
-__NOT YET WORKING__
-
 This is a simple example of how to use the new Bungie OAuth authentication in .NET. 
 This example is made in .NET Core, but should work as a base for anything else C#.
+
+The example is fully operational. I might be adding some extra nice things once I find a good endpoint
+that let's me call it with the AccessToken. 
 
 Please note the following:
 
