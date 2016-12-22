@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Net.Http;
@@ -23,7 +20,9 @@ namespace DestinyAuth.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            HttpContext.Session.Clear();
             return Redirect(BungieConfig.AuthURL);
+            
         }
         public IActionResult Error()
         {
@@ -46,7 +45,9 @@ namespace DestinyAuth.Controllers
                 }
                 var responseJson = await res.Content.ReadAsStringAsync();
                 var Tokens = new Bungie.Tokens(responseJson);
-
+                var jsonTokens = Newtonsoft.Json.JsonConvert.SerializeObject(Tokens);
+                HttpContext.Session.SetString("token", jsonTokens);
+                return RedirectToAction("Index", new {Controller= "Player" });
                 
 
 

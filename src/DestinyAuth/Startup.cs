@@ -32,6 +32,13 @@ namespace DestinyAuth
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<Bungie.BungieAppConfig>(Configuration);
+            services.AddDistributedMemoryCache();
+            services.AddSession( options =>
+            {
+                options.CookieName = ".SuperPichudaCookieDestiny.Sesion";
+                options.IdleTimeout = TimeSpan.FromSeconds(60);
+            });
+
             // Add framework services.
             services.AddMvc();
         }
@@ -53,6 +60,7 @@ namespace DestinyAuth
             }
 
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
