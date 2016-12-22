@@ -19,6 +19,10 @@ namespace DestinyAuth
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+            if(env.IsDevelopment())
+            {
+                builder.AddUserSecrets();
+            }
             Configuration = builder.Build();
         }
 
@@ -27,6 +31,7 @@ namespace DestinyAuth
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<Config.BungieAppConfig>(Configuration);
             // Add framework services.
             services.AddMvc();
         }

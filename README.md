@@ -13,5 +13,13 @@ Please note the following:
 - Any question related to this, should be made on GitHub, or the Bungie.net's dev community.
 
 Somehow my project creation flow managed to avoid licensing stuff. __This is MIT licensed__.
+
 ## References:
-https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/index
+- User Secrets: https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets
+
+## Running the Example
+- Clone the Repo. You're here, you should know how it works.
+- Restore the thing, using dotnet restore
+- Save the API Key and your Auth URL (from https://bungie.net/developer) into the UserSecrets storage (https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets).
+     - Use "ApiKey" and "AuthURL" to store string values.
+- Run the thing. Should work. 
