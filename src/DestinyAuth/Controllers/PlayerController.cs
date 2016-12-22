@@ -31,7 +31,7 @@ namespace DestinyAuth.Controllers
             {
                 cl.DefaultRequestHeaders.Add("x-api-key", BungieConfig.ApiKey);
                 cl.DefaultRequestHeaders.Authorization = 
-                    new System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Token.AccessToken.value);
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.AccessToken.value);
                 var resultado = await cl.GetStringAsync(url);
                 return new JsonResult(resultado);
             }
