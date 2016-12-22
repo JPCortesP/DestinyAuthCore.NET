@@ -10,9 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DestinyAuth", "DestinyAuth\DestinyAuth.xproj", "{888B1E52-9B6C-496C-9B23-3A50A745F2A4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{231863B2-9BDF-4A53-95E8-BB6779B49EC7}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DestinyAuth", "src\DestinyAuth\DestinyAuth.xproj", "{888B1E52-9B6C-496C-9B23-3A50A745F2A4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Tests", "tests\Tests\Tests.xproj", "{8E6C2B64-3E3E-46E6-8E51-12AE9D5F9291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,11 +26,16 @@ Global
 		{888B1E52-9B6C-496C-9B23-3A50A745F2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888B1E52-9B6C-496C-9B23-3A50A745F2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888B1E52-9B6C-496C-9B23-3A50A745F2A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6C2B64-3E3E-46E6-8E51-12AE9D5F9291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6C2B64-3E3E-46E6-8E51-12AE9D5F9291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6C2B64-3E3E-46E6-8E51-12AE9D5F9291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6C2B64-3E3E-46E6-8E51-12AE9D5F9291}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{888B1E52-9B6C-496C-9B23-3A50A745F2A4} = {C1006363-938F-4E8B-BF5A-2A97035436D2}
+		{8E6C2B64-3E3E-46E6-8E51-12AE9D5F9291} = {231863B2-9BDF-4A53-95E8-BB6779B49EC7}
 	EndGlobalSection
 EndGlobal
