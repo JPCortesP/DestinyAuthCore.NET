@@ -13,8 +13,8 @@ namespace DestinyAuth.Controllers
 {
     public class Auth : Controller
     {
-        private Config.BungieAppConfig BungieConfig;
-        public Auth(IOptions<Config.BungieAppConfig> options)
+        private Bungie.BungieAppConfig BungieConfig;
+        public Auth(IOptions<Bungie.BungieAppConfig> options)
         {
             this.BungieConfig = options.Value;
         }

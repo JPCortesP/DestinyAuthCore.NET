@@ -16,6 +16,7 @@ Somehow my project creation flow managed to avoid licensing stuff. __This is MIT
 
 ## References:
 - User Secrets: https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets
+- .NET new Configuration stuff: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration
 
 ## Running the Example
 - Clone the Repo. You're here, you should know how it works.
