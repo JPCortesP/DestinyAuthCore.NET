@@ -4,8 +4,7 @@ Example of a .NET Core implementation of the new Bungie Auth
 This is a simple example of how to use the new Bungie OAuth authentication in .NET. 
 This example is made in .NET Core, but should work as a base for anything else C#.
 
-The example is fully operational. I might be adding some extra nice things once I find a good endpoint
-that let's me call it with the AccessToken. 
+
 
 Please note the following:
 
@@ -24,4 +23,5 @@ Somehow my project creation flow managed to avoid licensing stuff. __This is MIT
 - Restore the thing, using dotnet restore
 - Save the API Key and your Auth URL (from https://bungie.net/developer) into the UserSecrets storage (https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets).
      - Use "ApiKey" and "AuthURL" to store string values.
+     - You might want to run the site first to get the URL Visual Studio / Kestrel gives you. If on Mac or Linux, should be something like https://localhost:5000/. On Windows it's the same unless you run it on Visual Studio (full). 
 - Run the thing. Should work. 
